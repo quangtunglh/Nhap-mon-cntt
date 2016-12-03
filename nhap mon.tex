@@ -1,0 +1,197 @@
+\documentclass[12pt]{report}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[utf8]{vietnam}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+
+% Change format of page
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{Big Data}
+\fancyfoot[L]{Nhóm 6 - KSTN-CNTT-K60}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+% Link color setup
+\hypersetup{
+	colorlinks = true,
+	linkcolor = black,
+	citecolor = blue
+}
+
+\usepackage{caption}
+\captionsetup[figure]{labelfont={it}}
+
+\renewcommand\thesection{\arabic{section}}
+
+\begin{document}
+\includepdf{report.pdf}
+\newpage
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+\chapter*{Lời nói đầu}
+\addcontentsline{toc}{chapter}{Lời nói đầu}
+Con người từ thủa sơ khai đã luôn ao ước có thể nghiên cứu và học hỏi nhiều hơn để bằng cách nào đó có thể dự đoán chính xác (hoặc gần đúng) những điều sẽ xảy đến trong tương lai. Và cho đến tận bây giờ ao ước đó vẫn còn rất cháy bỏng. Nhưng điều kiện kiên quyết để có thể dự đoán chính xác tương lai là nắm rõ mọi chi tiết của thực tại. Và ai cũng biết rằng, điều đó, với những vấn đề trong cuộc sống, rõ ràng là không thể. Nhưng thay vì chúng ta biết tất cả về thực tại, chúng ta có thể hài lòng hơn khi biết và hiểu nhiều hơn về thực tại. Không cần tất cả, chỉ cần đủ nhiều tri thức, xác suất để giải quyết tốt những bài toán thực tế cũng như dự đoán trước tương lai có thể đủ lớn để chúng ta chấp nhận được. Và để có nhiều tri thức hơn, ta phải có nhiều dữ liệu hơn, việc thu thập và xử lý một lượng lớn dữ liệu đang trở thành một vấn đề, thậm trí là một trào lưu mà cả thế giới đang chú ý đến, đó chính là bigdata. 
+
+Nhiều dữ liệu hơn không những giúp ta thấy nhiều hơn, nhiều dữ liệu hơn còn giúp ta thấy được những điều mới, mang đến một góc nhìn tốt hơn, cho phép ta thấy khác đi. Chúng ta chắc hẳn đã từng nghe về khái niệm Bigdata. Không thể phủ nhận rằng có nhiều sự thổi phồng xung quanh khái niệm trên, và điều đó thật đáng tiếc, vì Bigdata là một công cụ cực kì quan trọng mà nhờ đó, xã hội sẽ trở nên tiến bộ hơn. Trong quá khứ, chúng ta thường nhìn vào những dữ liệu nhỏ, tìm hiểu ý nghĩa của chúng, để cố gắng hiểu về thế giới, và giờ, ta có nhiều dữ liệu hơn, nhiều hơn bao giờ hết. Những gì ta biết là khi có một lượng lớn dữ liệu, ta có thể làm những điều mà trước kia không thể. 
+
+Dữ liệu lớn rất quan trọng và mới mẻ, và đó có thể là cách duy nhất mà hành tinh này sẽ đối phó với những thử thách toàn cầu: Đảm bảo thức ăn cho mọi người, cung cấp dịch vụ y tế, cung cấp năng lượng, điện, và đảm bảo người dân không bị thiêu rụi bởi sự nóng lên toàn cầu. Tất cả nhờ vào việc sử dụng dữ liệu hiệu quả. Xuất phát từ những lợi ích lớn lao đó, nhóm chúng em chọn đề tài tìm hiểu về Bigdata.
+Bài báo cáo sẽ đề cập đến khái niệm về Bigdata cũng như những lợi ích mà nó đem lại. Ngoài ra, còn đi vào tìm hiểu cơ sở khoa học, những khó khăn và đặc thù trong việc xử lý dữ liệu lớn mà phải thực hiện khác so với những công việc chúng ta thường làm với dữ liệu nhỏ.
+
+Để hoàn thành được bài tập lớn này, nhóm chúng em đã tích cực tìm hiểu thông tin sách báo cũng như  từ các nguồn đáng tin cậy trên internet. Đồng thời cùng với sự kết hợp ăn ý và phân chia công việc hợp lý, cả nhóm đã cùng nhau hoàn thành bài tập lớn với tất cả tâm huyết và đam mê nghiên cứu. Xin được gửi lời cảm ơn chân thành đến Thầy Nguyễn Bình Minh , Giảng viên Khoa Hệ thống thông tin Trường Đại học Bách Khoa Hà Nội - đã hết lòng giúp đỡ, hướng dẫn, chỉ dạy tận tình để nhóm em hoàn thành được đề tài này.
+\newpage
+\begin{flushright}
+\bfseries
+Hà Nội, Ngày 2 tháng 12 năm 2016 \\
+\vspace{0.5cm}
+Nhóm 6, Lớp KSTN-CNTT-K60 \\
+(Danh sách thành viên ký tên) \\
+\vspace{4mm}
+NGUYỄN VĂN TRUNG \\
+\vspace{13mm}
+CAO THANH TÙNG \\
+\vspace{13mm}
+TẠ QUANG TÙNG \\
+\vspace{13mm}
+TỐNG VĂN VINH
+\newpage
+
+\end{flushright}
+
+\chapter*{Nội dung}
+\addcontentsline{toc}{chapter}{Nội dung}
+\section{Khái quát về Big Data}
+\subsection{Big Data là gì?}
+
+Big Data là thuật ngữ dùng để chỉ một tập hợp dữ liệu rất lớn và rất phức tạp đến nỗi những công cụ, ứng dụng xử lí dữ liệu truyền thống không thể nào đảm đương được. \cite{definition}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{big_data.png}
+\end{figure}
+
+Kích cỡ của Big Data đang từng ngày tăng lên, và tính đến năm 2012 thì nó có thể nằm trong khoảng vài chục terabyte cho đến nhiều petabyte (1 petabyte = 1024 terabyte) chỉ cho một tập hợp dữ liệu mà thôi.
+
+\subsection{Đặc điểm nổi trội của Big Data}
+\begin{itemize}
+\item \textbf{Dung lượng (Volume)}: Dung lượng của Big Data đang tăng lên mạnh mẽ từng ngày. Theo tài liệu của Intel vào tháng 9/2013, cứ mỗi 11 giây, 1 petabyte dữ liệu được tạo ra trên toàn thế giới, tương đương với một đoạn video HD dài 13 năm. 
+\item \textbf{Tốc độ (Velocity)}: là tốc độ mà tại đó dữ liệu được phân tích bởi các công ty để cung cấp một trải nghiệm người dùng tốt hơn. Với sự ra đời của các kỹ thuật, công cụ, ứng dụng lưu trữ, nguồn dữ liệu liên tục được bổ sung với tốc độ nhanh chóng. Tổ chức McKinsey Global ước tính lượng dữ liệu đang tăng trưởng với tốc độ 40%/năm, và sẽ tăng 44 lần từ năm 2009 đến 2020.
+\item \textbf{Tính đa dạng (Variety)}: Dữ liệu được thu thập từ nhiều nguồn khác nhau, từ các thiết bị cảm biến, thiết bị di động, qua mạng xã hội .v.v…
+\item \textbf{Giá trị (Value)}: là quá trình trích xuất các giá trị to lớn đang tiềm ẩn trong các bộ dữ liệu khổng lồ. Đây là đặc trưng quan trọng nhất bởi các thông tin trích xuất được từ việc phân tích Dữ liệu lớn có thể được sử dụng trong rất nhiều lĩnh vực như kinh doanh, nghiên cứu khoa học, y học, vật lý…
+\end{itemize}
+
+\subsection{Big Data có vai trò lợi ích gì?}
+Big Data chứa trong nó rất nhiều thông tin quý giá mà nếu trích xuất thành công, nó sẽ giúp rất nhiều cho việc:
+\begin{itemize}
+	\item[+] Kinh doanh.
+	\item[+] Nghiên cứu khoa học.
+	\item[+] Dự đoán các dịch bệnh sắp phát sinh.
+	\item[+] Dự đoán tỉ lệ thất nghiệp, xu hướng nghề nghiệp.
+	\item[+] Xác định điều kiện giao thông theo thời gian thực.
+	\item[+] …
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{util.png}
+\end{figure}
+Nhìn chung, có bốn lợi ích mà Big Data có thể mang lại: 
+\begin{itemize}
+	\item[+] Cắt giảm chi phí.
+	\item[+] Giảm thời gian.
+	\item[+] Tăng thời gian phát triển và tối ưu hóa sản phẩm.
+	\item[+] Hỗ trợ con người đưa ra những quyết định đúng và hợp lý hơn. (những điều này thể hiện ntn, thì ở những ví dụ sẽ đc làm rõ)
+\end{itemize}
+
+\subsection{Tại sao Big Data đang trở thành một xu thế?}
+Theo các nhà phân tích, ngành công nghiệp phần mềm đã giúp hàng nghìn người trở thành triệu phú, tỷ phú và vòng xoay này đang lặp lại với Big Data. Ngược dòng lịch sử, trước khi phát minh ra máy tính cá nhân (PC), các công ty phải chi hàng triệu USD cho các máy tính cồng kềnh để xử lý dữ liệu. Apple và Microsoft đã thay đổi điều đó bằng việc đưa máy tính vào mọi nhà. Với Big Data cũng vậy, khi giá của những bộ nhớ lớn, xử lý tốc độ cao giảm xuống, các công ty có thể truy cập khối lượng dữ liệu lớn cả bên trong và bên ngoài công ty, từ đó đưa ra đánh giá chính xác về thị trường, nắm bắt cơ hội và thu lợi nhuận.  Vì vậy, Big Data là câu chuyện thời thượng, thu hút sự quan tâm đặc biệt của giới kinh doanh công nghệ toàn thế giới.
+
+\section{Những ví dụ về Big Data}
+Có rất nhiều ví dụ về Big Data, tuy nhiên chúng tôi sẽ chọn những ví dụ cho mọi người dễ hình dung nhất về vấn đề này.
+
+\subsection{Thí nghiệm về máy gia tốc hạt lớn (LHC) ở Châu Âu}
+Khi các thí nghiệm trên máy được tiến hành, kết quả sẽ được ghi nhận bởi 150 triệu cảm biến với nhiệm vụ truyền tải dữ liệu khoảng 40 triệu lần mỗi giây. Kết quả là nếu như LHC ghi nhận hết kết quả từ mọi cảm biến thì luồng dữ liệu sẽ trở nên vô cùng lớn, có thể đạt đến 150 triệu petabyte mỗi năm, hoặc 500 exabyte mỗi ngày, cao hơn 200 lần so với tất cả các nguồn dữ liệu khác trên thế giới gộp lại.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{lhc.png}
+\caption{\it Đây là kết quả mô phỏng của một vụ va chạm giữa các hạt sơ cấp trong máy gia tốc LHC, có rất rất nhiều thông tin cần phải ghi nhận trong mỗi vụ chạm như thế này}
+\end{figure}
+
+Trong mỗi giây như thế lại có đến khoảng 600 triệu vụ va chạm giữa các hạt vật chất diễn ra, nhưng sau khi chọn lọc lại từ khoảng 99,999\% các luồng dữ liệu đó, chỉ có tầm 100 vụ va chạm là được các nhà khoa học quan tâm. Điều này có nghĩa là cơ quan chủ quản LHC phải tìm những biện pháp mới để quản lý và xử lí hết mớ dữ liệu khổng lồ này.
+
+\subsection{Các ví dụ khác}
+Khi Sloan Digital Sky Sruver, một trạm quan sát vũ trụ đặt tại New Mexico, bắt đầu đi vào hoạt động hồi năm 2000, sau một vài tuần nó đã thu thập dữ liệu lớn hơn tổng lượng dữ liệu mà ngành thiên văn học đã từng thu thập trong quá khứ, khoảng 200GB mỗi đêm và hiện tổng dung lượng đã đạt đến hơn 140 terabyte. Đài quan sát LSST để thay thế cho SDSS dự kiến khánh thành trong năm 2016 thì sẽ thu thập lượng dữ liệu tương đương như trên nhưng chỉ trong vòng 5 ngày.
+
+Hoặc như công tác giải mã di truyền của con người. Trước đây công việc này mất đến 10 năm để xử lí, còn bây giờ người ta chỉ cần một tuần là đã hoàn thành. 
+
+Còn Trung tâm giả lập khí hậu của NASA thì đang chứa 32 petabyte dữ liệu về quan trắc thời tiết và giả lập trong siêu máy tính của họ.
+
+Việc lưu trữ hình ảnh, văn bản và các nội dung đa phương tiện khác trên Wikipedia cũng như ghi nhận hành vi chỉnh sửa của người dùng cũng cấu thành một tập hợp Big Data.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{wiki.png}
+\caption{\it Hoạt động của người dùng Wikipedia được mô hình hóa và với kích thước hàng terabyte, đây cũng có thể được xem là một dạng Big Data}
+\end{figure}
+
+\subsection{Thêm một vài thông tin cập nhật}
+Theo tài liệu của Intel vào tháng 9/2013, hiện nay thế giới đang tạo ra 1 petabyte dữ liệu trong mỗi 11 giây và nó tương đương với một đoạn video HD dài 13 năm. Bản thân các công ty, doanh nghiệp cũng đang sở hữu Big Data của riêng mình, chẳng hạn như trang bán hàng trực tuyến eBay thì sử dụng hai trung tâm dữ liệu với dung lượng lên đến 40 petabyte để chứa những truy vấn, tìm kiếm, đề xuất cho khách hàng cũng như thông tin về hàng hóa của mình.
+
+Nhà bán lẻ online Amazon.com thì phải xử lí hàng triệu hoạt động mỗi ngày cũng như những yêu cầu từ khoảng nửa triệu đối tác bán hàng. Amazon sử dụng một hệ thống Linux và hồi năm 2005, họ từng sở hữu ba cơ sở dữ liệu Linux lớn nhất thế giới với dung lượng là 7,8TB, 18,5TB và 24,7TB. 
+
+Tương tự, Facebook cũng phải quản lí 50 tỉ bức ảnh từ người dùng tải lên, YouTube hay Google thì phải lưu lại hết các lượt truy vấn và video của người dùng cùng nhiều loại thông tin khác có liên quan.
+
+\subsection{Tiện ích với Big Data}
+Nếu để ý một chút, bạn sẽ thấy khi mua sắm online trên eBay, Amazon, Tiki, Lazada hoặc những trang tương tự, trang này cũng sẽ đưa ra những sản phẩm gợi ý tiếp theo cho bạn, ví dụ khi xem điện thoại, nó sẽ gợi ý cho bạn mua thêm ốp lưng, pin dự phòng; hoặc khi mua áo thun thì sẽ có thêm gợi ý quần jean, dây nịt... Do đó, nghiên cứu được sở thích, thói quen của khách hàng cũng gián tiếp giúp doanh nghiệp bán được nhiều hàng hóa hơn.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{ebay.png}
+\end{figure}
+
+Vậy những thông tin về thói quen, sở thích này có được từ đâu? Chính là từ lượng dữ liệu khổng lồ mà các doanh nghiệp thu thập trong lúc khách hàng ghé thăm và tương tác với trang web của mình. Chỉ cần doanh nghiệp biết khai thác một cách có hiệu quả Big Data thì nó không chỉ giúp tăng lợi nhuận cho chính họ mà còn tăng trải nghiệm mua sắm của người dùng, chúng ta có thể tiết kiệm thời gian hơn nhờ những lời gợi ý so với việc phải tự mình tìm kiếm.
+
+Người dùng cuối chúng ta sẽ được hưởng lợi cũng từ việc tối ưu hóa như thế, chứ bản thân chúng ta thì khó mà tự mình phát triển hay mua các giải pháp để khai thác Big Data bởi giá thành của chúng quá đắt, có thể đến cả trăm nghìn đô. Ngoài ra, lượng dữ liệu mà chúng ta có được cũng khó có thể xem là “Big” nếu chỉ có vài Terabyte sinh ra trong một thời gian dài.
+
+Xa hơi một chút, ứng dụng được Big Data có thể giúp các tổ chức, chính phủ dự đoán được tỉ lệ thất nghiệp, xu hướng nghề nghiệp của tương lai để đầu tư cho những hạng mục đó, hoặc cắt giảm chi tiêu, kích thích tăng trưởng kinh tế, v.v... thậm chí là ra phương án phòng ngừa trước một dịch bệnh nào đó, giống như trong phim World War Z, nước Israel đã biết trước có dịch zombie nên đã nhanh chóng xây tường thành ngăn cách với thế giới bên ngoài.
+
+Mà cũng không cần nói đến tương lai phim ảnh gì cả, vào năm 2009, Google đã sử dụng dữ liệu Big Data của mình để phân tích và dự đoán xu hướng ảnh hưởng, lan truyền của dịch cúm H1N1 đấy thôi. Dịch vụ này có tên là Google Flu Trends. Xu hướng mà Google rút ra từ những từ khóa tìm kiếm liên quan đến dịch H1N1 đã được chứng minh là rất sát với kết quả do hai hệ thống cảnh báo cúm độc lập Sentinel GP và HealthStat đưa ra. Dữ liệu của Flu Trends được cập nhật gần như theo thời gian thực và sau đó sẽ được đối chiếu với số liệu từ những trung tâm dịch bệnh ở nhiều nơi trên thế giới.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{graph.png}
+\caption{\it Đường màu xanh là dự đoán của Google Flu Trends dựa trên số từ khóa tìm kiếm liên quan đến các dịch cúm, màu vàng là dữ liệu do cơ quan phòng chống dịch của Mỹ đưa ra.}
+\end{figure}
+
+\section{Các công cụ khai thác Big Data}
+\subsection{Cụm máy tính (Computer Cluster)}
+Với một lượng dữ liệu lớn như vậy thì ta cần sử dụng những máy tính có sức mạnh lớn để xử lý nó. Một trong những kiến trúc phổ biến nhất đối với một siêu máy tính (chiếm tới 80\% thị phần siêu máy tính, theo TOP500 \cite{top500}) hay một trung tâm dữ liệu đó là kiến trúc cluster.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{top500.png}
+\caption{\it Thị phần kiến trúc siêu máy tính}
+\end{figure}
+
+
+\begin{thebibliography}{30}
+\bibitem{definition}
+\textit{Big Data là gì và người ta khai thác, ứng dụng nó vào cuộc sống như thế nào?}, 2016. \\
+\url{https://www.linkedin.com/pulse/big-data-l%C3%A0-g%C3%AC-v%C3%A0-ng%C6%B0%E1%BB%9Di-ta-khai-th%C3%A1c-%E1%BB%A9ng-d%E1%BB%A5ng-n%C3%B3-v%C3%A0o-cu%E1%BB%99c-nguyen}
+\bibitem{top500}
+\textit{The Supercomputer Landscape Today}, 2013. \\
+\url{http://wiki.expertiza.ncsu.edu/index.php/CSC/ECE_506_Spring_2013/1b_dj}
+
+\end{thebibliography}
+
+
+\end{document}
