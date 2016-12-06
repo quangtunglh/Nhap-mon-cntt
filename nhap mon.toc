@@ -7,12 +7,15 @@
 \contentsline {subsection}{\numberline {1.4}T\IeC {\d a}i sao Big Data \IeC {\dj }ang tr\IeC {\h \ohorn } th\IeC {\`a}nh m\IeC {\d \ocircumflex }t xu th\IeC {\'\ecircumflex }?}{6}{subsection.0.1.4}
 \contentsline {section}{\numberline {2}Nh\IeC {\~\uhorn }ng v\IeC {\'\i } d\IeC {\d u} v\IeC {\`\ecircumflex } Big Data}{6}{section.0.2}
 \contentsline {subsection}{\numberline {2.1}Th\IeC {\'\i } nghi\IeC {\d \ecircumflex }m v\IeC {\`\ecircumflex } m\IeC {\'a}y gia t\IeC {\'\ocircumflex }c h\IeC {\d a}t l\IeC {\'\ohorn }n (LHC) \IeC {\h \ohorn } Ch\IeC {\^a}u \IeC {\^A}u}{6}{subsection.0.2.1}
-\contentsline {subsection}{\numberline {2.2}C\IeC {\'a}c v\IeC {\'\i } d\IeC {\d u} kh\IeC {\'a}c}{7}{subsection.0.2.2}
-\contentsline {subsection}{\numberline {2.3}Th\IeC {\^e}m m\IeC {\d \ocircumflex }t v\IeC {\`a}i th\IeC {\^o}ng tin c\IeC {\d \acircumflex }p nh\IeC {\d \acircumflex }t}{8}{subsection.0.2.3}
-\contentsline {subsection}{\numberline {2.4}Ti\IeC {\d \ecircumflex }n \IeC {\'\i }ch v\IeC {\'\ohorn }i Big Data}{8}{subsection.0.2.4}
+\contentsline {subsection}{\numberline {2.2}M\IeC {\'\ocircumflex }i quan h\IeC {\d \ecircumflex } gi\IeC {\~\uhorn }a bigdata v\IeC {\`a} Tr\IeC {\'\i } tu\IeC {\d \ecircumflex } nh\IeC {\^a}n t\IeC {\d a}o}{7}{subsection.0.2.2}
+\contentsline {subsection}{\numberline {2.3}C\IeC {\'a}c v\IeC {\'\i } d\IeC {\d u} kh\IeC {\'a}c}{8}{subsection.0.2.3}
+\contentsline {subsection}{\numberline {2.4}Th\IeC {\^e}m m\IeC {\d \ocircumflex }t v\IeC {\`a}i th\IeC {\^o}ng tin c\IeC {\d \acircumflex }p nh\IeC {\d \acircumflex }t}{9}{subsection.0.2.4}
+\contentsline {subsection}{\numberline {2.5}Ti\IeC {\d \ecircumflex }n \IeC {\'\i }ch v\IeC {\'\ohorn }i Big Data}{9}{subsection.0.2.5}
 \contentsline {section}{\numberline {3}C\IeC {\'a}c c\IeC {\^o}ng c\IeC {\d u} khai th\IeC {\'a}c Big Data}{10}{section.0.3}
 \contentsline {subsection}{\numberline {3.1}C\IeC {\d u}m m\IeC {\'a}y t\IeC {\'\i }nh (Computer Cluster)}{10}{subsection.0.3.1}
-\contentsline {subsection}{\numberline {3.2}C\IeC {\^o}ng ngh\IeC {\d \ecircumflex } Hadoop}{11}{subsection.0.3.2}
-\contentsline {subsubsection}{T\IeC {\h \ocircumflex }ng quan v\IeC {\`\ecircumflex } Hadoop}{11}{section*.13}
+\contentsline {subsection}{\numberline {3.2}C\IeC {\^o}ng ngh\IeC {\d \ecircumflex } Hadoop}{12}{subsection.0.3.2}
+\contentsline {subsubsection}{T\IeC {\h \ocircumflex }ng quan v\IeC {\`\ecircumflex } Hadoop}{12}{section*.13}
 \contentsline {subsubsection}{H\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng file ph\IeC {\^a}n t\IeC {\'a}n Hadoop (Hadoop Distributed File System \IeC {\textendash } HDFS)}{12}{section*.14}
-\contentsline {subsubsection}{T\IeC {\h \ocircumflex }ng quan v\IeC {\`\ecircumflex } MapReduce}{15}{section*.18}
+\contentsline {subsubsection}{T\IeC {\h \ocircumflex }ng quan v\IeC {\`\ecircumflex } MapReduce}{16}{section*.18}
+\contentsline {chapter}{Nh\IeC {\~\uhorn }ng ch\IeC {\h i} tr\IeC {\'\i }ch \IeC {\dj }\IeC {\'\ocircumflex }i v\IeC {\'\ohorn }i Big Data}{20}{chapter*.27}
+\contentsline {chapter}{K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n v\IeC {\`a} h\IeC {\uhorn }\IeC {\'\ohorn }ng ph\IeC {\'a}t tri\IeC {\h \ecircumflex }n}{21}{chapter*.28}

@@ -42,7 +42,7 @@
 \addcontentsline{toc}{chapter}{Lời nói đầu}
 Con người từ thủa sơ khai đã luôn ao ước có thể nghiên cứu và học hỏi nhiều hơn để bằng cách nào đó có thể dự đoán chính xác (hoặc gần đúng) những điều sẽ xảy đến trong tương lai. Và cho đến tận bây giờ ao ước đó vẫn còn rất cháy bỏng. Nhưng điều kiện kiên quyết để có thể dự đoán chính xác tương lai là nắm rõ mọi chi tiết của thực tại. Và ai cũng biết rằng, điều đó, với những vấn đề trong cuộc sống, rõ ràng là không thể. Nhưng thay vì chúng ta biết tất cả về thực tại, chúng ta có thể hài lòng hơn khi biết và hiểu nhiều hơn về thực tại. Không cần tất cả, chỉ cần đủ nhiều tri thức, xác suất để giải quyết tốt những bài toán thực tế cũng như dự đoán trước tương lai có thể đủ lớn để chúng ta chấp nhận được. Và để có nhiều tri thức hơn, ta phải có nhiều dữ liệu hơn, việc thu thập và xử lý một lượng lớn dữ liệu đang trở thành một vấn đề, thậm trí là một trào lưu mà cả thế giới đang chú ý đến, đó chính là bigdata. 
 
-Nhiều dữ liệu hơn không những giúp ta thấy nhiều hơn, nhiều dữ liệu hơn còn giúp ta thấy được những điều mới, mang đến một góc nhìn tốt hơn, cho phép ta thấy khác đi. Chúng ta chắc hẳn đã từng nghe về khái niệm Bigdata. Không thể phủ nhận rằng có nhiều sự thổi phồng xung quanh khái niệm trên, và điều đó thật đáng tiếc, vì Bigdata là một công cụ cực kì quan trọng mà nhờ đó, xã hội sẽ trở nên tiến bộ hơn. Trong quá khứ, chúng ta thường nhìn vào những dữ liệu nhỏ, tìm hiểu ý nghĩa của chúng, để cố gắng hiểu về thế giới, và giờ, ta có nhiều dữ liệu hơn, nhiều hơn bao giờ hết. Những gì ta biết là khi có một lượng lớn dữ liệu, ta có thể làm những điều mà trước kia không thể. 
+Nhiều dữ liệu hơn không những giúp ta thấy nhiều hơn, nhiều dữ liệu hơn còn giúp ta thấy được những điều mới, mang đến một góc nhìn tốt hơn, cho phép ta thấy khác đi. Chúng ta chắc hẳn đã từng nghe về khái niệm Big Data. Không thể phủ nhận rằng có nhiều sự thổi phồng xung quanh khái niệm trên, và điều đó thật đáng tiếc, vì Bigdata là một công cụ cực kì quan trọng mà nhờ đó, xã hội sẽ trở nên tiến bộ hơn. Trong quá khứ, chúng ta thường nhìn vào những dữ liệu nhỏ, tìm hiểu ý nghĩa của chúng, để cố gắng hiểu về thế giới, và giờ, ta có nhiều dữ liệu hơn, nhiều hơn bao giờ hết. Những gì ta biết là khi có một lượng lớn dữ liệu, ta có thể làm những điều mà trước kia không thể. 
 
 Dữ liệu lớn rất quan trọng và mới mẻ, và đó có thể là cách duy nhất mà hành tinh này sẽ đối phó với những thử thách toàn cầu: Đảm bảo thức ăn cho mọi người, cung cấp dịch vụ y tế, cung cấp năng lượng, điện, và đảm bảo người dân không bị thiêu rụi bởi sự nóng lên toàn cầu. Tất cả nhờ vào việc sử dụng dữ liệu hiệu quả. Xuất phát từ những lợi ích lớn lao đó, nhóm chúng em chọn đề tài tìm hiểu về Bigdata.
 Bài báo cáo sẽ đề cập đến khái niệm về Bigdata cũng như những lợi ích mà nó đem lại. Ngoài ra, còn đi vào tìm hiểu cơ sở khoa học, những khó khăn và đặc thù trong việc xử lý dữ liệu lớn mà phải thực hiện khác so với những công việc chúng ta thường làm với dữ liệu nhỏ.
@@ -77,6 +77,7 @@ Big Data là thuật ngữ dùng để chỉ một tập hợp dữ liệu rất
 \begin{figure}[H]
 \centering
 \includegraphics[scale=1]{big_data.png}
+\caption{ }
 \end{figure}
 
 Kích cỡ của Big Data đang từng ngày tăng lên, và tính đến năm 2012 thì nó có thể nằm trong khoảng vài chục terabyte cho đến nhiều petabyte (1 petabyte = 1024 terabyte) chỉ cho một tập hợp dữ liệu mà thôi.
@@ -103,13 +104,14 @@ Big Data chứa trong nó rất nhiều thông tin quý giá mà nếu trích xu
 \begin{figure}[H]
 \centering
 \includegraphics[scale=1]{util.png}
+\caption{\it Giao thông thời gian thực}
 \end{figure}
 Nhìn chung, có bốn lợi ích mà Big Data có thể mang lại: 
 \begin{itemize}
 	\item[+] Cắt giảm chi phí.
 	\item[+] Giảm thời gian.
 	\item[+] Tăng thời gian phát triển và tối ưu hóa sản phẩm.
-	\item[+] Hỗ trợ con người đưa ra những quyết định đúng và hợp lý hơn. (những điều này thể hiện ntn, thì ở những ví dụ sẽ đc làm rõ)
+	\item[+] Hỗ trợ con người đưa ra những quyết định đúng và hợp lý hơn. (những điều này thể hiện như thế nào, thì ở những ví dụ sẽ được làm rõ)
 \end{itemize}
 
 \subsection{Tại sao Big Data đang trở thành một xu thế?}
@@ -128,6 +130,11 @@ Khi các thí nghiệm trên máy được tiến hành, kết quả sẽ đư�
 \end{figure}
 
 Trong mỗi giây như thế lại có đến khoảng 600 triệu vụ va chạm giữa các hạt vật chất diễn ra, nhưng sau khi chọn lọc lại từ khoảng 99,999\% các luồng dữ liệu đó, chỉ có tầm 100 vụ va chạm là được các nhà khoa học quan tâm. Điều này có nghĩa là cơ quan chủ quản LHC phải tìm những biện pháp mới để quản lý và xử lí hết mớ dữ liệu khổng lồ này.
+
+\subsection{Mối quan hệ giữa bigdata và Trí tuệ nhân tạo}
+Một trong những lĩnh vực ấn tượng nhất mà khái niệm này đang diễn ra là trong lĩnh vực học máy. Máy học là một nhánh của trí tuệ nhân tạo mà bản thân nó lại là một nhánh của khoa học máy tính. Ý tưởng chung là thay vì phải hướng dẫn máy tính những gì phải làm, chúng ta sẽ chỉ ném dữ liệu liên quan đến vấn đề và bảo máy tính tự tính toán. Và để bạn hiểu được vấn đề này, hãy cùng nhìn lại nguồn gốc của nó. Vào những năm 1950, một nhà khoa học máy tính của IBM tên Arthur Samuel đã viết một chương trình máy tính để ông ấy có thể chơi cờ với máy nó. Ông ấy chơi và liên tục thắng. Bởi vì máy tính chỉ đơn giản biết một nước đi thế nào là đúng luật. Còn Arthur Samuel không chỉ hiểu luật chơi mà còn biết chiến thuật và mưu mẹo nữa. Arthur Samuel tiếp tục nâng cấp cho phần mềm đánh cờ bằng cách cài đặt thêm một chương trình con ghi lại xác suất những nước đi quen thuộc thường dẫn đến chiến thắng. Tuy nhiên, ông vẫn luôn thắng mỗi khi đánh cờ với chiếc máy tính của mình. Cuối cùng ông ta để máy tính tự chơi cờ với chính nó. Nó tự chơi cờ, nó thu thập nhiều dữ liệu hơn. Nó thu thập nhiều dữ liệu hơn, nó tăng độ chính xác về khả năng dự đoán. Và khi Arthur Samuel quay lại và đánh cờ với máy, ông ấy không thể thắng được chiếc máy tính của mình nữa. Vậy là Arthur Samuel đã tạo ra một chương trình vượt qua khả năng của ông ấy trong một việc mà ông ấy dạy nó. Và ý tưởng này về học máy đang được ứng dụng ở mọi nơi. 
+
+Máy học là nền tảng cơ bản của rất nhiều thứ chúng ta làm trên mạng: Các công cụ tìm kiếm, thuật toán cá nhân hóa của amazon, máy tính dịch thuật, hệ thống xác nhận giọng nói. Gần đây các nhà nghiên cứu đã tìm hiểu về các vấn đề sinh thiết. Sinh thiết ung thư, và họ đã nhờ máy tính xác định, bằng cách nhìn vào dữ liệu và chỉ số sống sót để xác nhận rằng những tế bào này có thật sự bị ung thư hay không. Và thật ngạc nhiên là máy tính có thể chẩn đoán chính xác đến bất ngờ, thậm chí có thể đưa ra lộ trình chữa trị hiệu quả hơn của các bác sĩ!
 
 \subsection{Các ví dụ khác}
 Khi Sloan Digital Sky Sruver, một trạm quan sát vũ trụ đặt tại New Mexico, bắt đầu đi vào hoạt động hồi năm 2000, sau một vài tuần nó đã thu thập dữ liệu lớn hơn tổng lượng dữ liệu mà ngành thiên văn học đã từng thu thập trong quá khứ, khoảng 200GB mỗi đêm và hiện tổng dung lượng đã đạt đến hơn 140 terabyte. Đài quan sát LSST để thay thế cho SDSS dự kiến khánh thành trong năm 2016 thì sẽ thu thập lượng dữ liệu tương đương như trên nhưng chỉ trong vòng 5 ngày.
@@ -157,6 +164,7 @@ Nếu để ý một chút, bạn sẽ thấy khi mua sắm online trên eBay, A
 \begin{figure}[H]
 \centering
 \includegraphics[scale=1]{ebay.png}
+\caption{\it Tiện ích của Big Data}
 \end{figure}
 
 Vậy những thông tin về thói quen, sở thích này có được từ đâu? Chính là từ lượng dữ liệu khổng lồ mà các doanh nghiệp thu thập trong lúc khách hàng ghé thăm và tương tác với trang web của mình. Chỉ cần doanh nghiệp biết khai thác một cách có hiệu quả Big Data thì nó không chỉ giúp tăng lợi nhuận cho chính họ mà còn tăng trải nghiệm mua sắm của người dùng, chúng ta có thể tiết kiệm thời gian hơn nhờ những lời gợi ý so với việc phải tự mình tìm kiếm.
@@ -204,7 +212,6 @@ Kiến trúc cluster là một trong những kiến trúc mạnh mẽ với chi 
 Nhắc tới Big Data ta không thể không nhắc tới Hadoop, nó phổ biến đến mức nhiều khi Hadoop còn được dùng đồng nghĩa với Big Data. Hadoop được tạo bởi Doug Cutting, nhà sáng lập của Apache Lucene.
 
 Hadoop, xuất bản đầu tiên vào 10/12/2011\cite{hadoop}, là một framework mã nguồn mở phát triển bởi Apache Software Foundation được sử dụng cho lưu trữ và xử lý phân tán trên một lượng lớn dữ liệu. Hadoop được viết bằng ngôn ngữ Java và hoạt động trên một cụm máy tính,  được phát triển nhờ ý tưởng từ hai bài báo nổi tiếng của Google về Google File System (GFS) và MapReduce. 
-\newpage
 
 \subsubsection{Hệ thống file phân tán Hadoop (Hadoop Distributed File System – HDFS)}
 
@@ -259,6 +266,96 @@ Nhờ HDFS, ta đã có thể lưu trữ được lượng rất lớn dữ li�
 
 Được bắt nguồn từ bài báo nổi tiếng của Google \cite{mapreduce_google}, nó là mô hình tính toán song song phân tán rất mạnh mẽ của Hadoop. MapReduce được coi là trái tim của Hadoop, dù mô hình tuy đơn giản, bao gồm hai hàm chính là map và reduce. 
 
+Để hiểu MapReduce hoạt động như thế nào, ta bắt đầu với ví dụ sau: \\
+Dữ liệu được lấy từ Trung tâm dữ liệu thời tiết của Mỹ (National Climatic Data Center). Được lưu trữ dưới dạng từng dòng văn bản ASCII, mỗi dòng một bản ghi, dưới dạng các file zip. Giả sử bắt đầu từ 1901 đến 2001. Dữ liệu được lưu trữ trên HDFS
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=7cm]{data.png}
+\caption{\it Dữ liệu của năm 1990 được lưu trữ thành các file gzip}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=11cm]{lines.png}
+\caption{\it Ví dụ về một vài dòng dữ liệu}
+\end{figure}
+
+MapReduce bắt đầu khi Hadoop lựa chọn các datanode nơi các block của dữ liệu được lưu trữ.  Input Reader được chạy trên node đó, thực hiện search toàn bộ các file trong thư mục cần tính toán, đọc dữ liệu, trả về dưới dạng <key, value> (Ở đây key là số thứ tự dòng, value là mỗi dòng). Do dữ liệu được lưu ngay tại datanode nên việc đọc dữ liệu sẽ giống như đọc trên đĩa thông thường. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14cm]{input_reader.png}
+\caption{\it Dữ liệu sau khi qua Input Reader}
+\end{figure}
+
+Tiếp theo, hàm map được chạy nhiều lần trên datanode đó. Mỗi hàm map được thực hiện ứng với dữ liệu đầu vào là <key, value> của Input Reader, thực hiện phân tích, tách lấy <key, value> mới và trả về (Ở đây key là số năm, value là nhiệt độ), được sắp xếp theo key và lưu trữ các giá trị này trên ổ cứng.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=4cm]{map.png}
+\caption{\it Dữ liệu sau khi qua hàm map}
+\end{figure}
+
+Dữ liệu trên nhiều datanode sẽ được gửi qua mạng, tập hợp lại ở một vài node. Nhờ hàm shuffle, dữ liệu được ghép lại và sắp xếp một lần nữa:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm]{shuffle.png}
+\caption{\it Dữ liệu sau khi qua hàm shuffle}
+\end{figure}
+
+Cuối cùng trên các node đấy sẽ gọi hàm reduce, nhận giá trị là key và một danh sách các giá trị đã ghép, thực thi và trả về <key, value> mong muốn (Ở đây hàm reduce sẽ tìm giá trị lớn nhất của nhiệt độ). Dữ liệu được lưu trữ trở lại HDFS dưới dạng một file kết quả.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{data_flow.png}
+\caption{\it Dữ liệu qua các hàm MapReduce}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{single_reduce.png}
+\caption{\it Data flow với trường hợp một hàm reduce}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{multi_reduce.png}
+\caption{\it Data flow với trường hợp nhiều hàm reduce}
+\end{figure}
+
+Những ưu điểm của MapReduce so với các phương pháp tính toán thông thường:
+\begin{itemize}
+\item[+] Tính mở rộng
+\item[+] Lời giải chi phí thấp
+\item[+] Tính mềm dẻo
+\item[+] Tốc độ cao nhờ tính toán song song
+
+Được sử dụng rộng rãi trong nhiều ứng dụng, bao gồm việc tìm kiếm, sắp xếp, tính toán phân tán, học máy, … Tại google, nó được sử dụng cho việc sinh ra toàn bộ Google index của World Wide Web, phục vụ cho công cụ Search Engine mạnh mẽ của mình.
+\end{itemize}
+
+\chapter*{Những chỉ trích đối với Big Data}
+\addcontentsline{toc}{chapter}{Những chỉ trích đối với Big Data}
+
+\chapter*{Kết luận và hướng phát triển}
+\addcontentsline{toc}{chapter}{Kết luận và hướng phát triển}
+
+\begin{itemize}
+\large
+\it
+\item[-] Kết luận về ưu nhược điểm: Đã làm hoặc chưa làm được gì.
+\item[-] Hướng phát triển cho đề tài, cho sản phẩm và khả năng ứng dụng.
+\end{itemize}
+
+Đề tài đã đề cập tới khái niệm Big Data, đưa ra nhiều ví dụ để giải thích được mức độ quan trọng của Ưu điểm: Ứng dụng Bigdata trong cuộc sống. Đồng thời đã cũng đã chạm được vào cơ chế xử lý dữ liệu lớn để khai thác hiệu quả nguồn dữ liệu. Phân tích những vấn đề bất cập, liên quan đến đạo đức khoa học trong ứng dụng Big Data. 
+
+Nhược điểm: Do phạm vi nội dung báo cáo có giới hạn, cùng với mong muốn hướng tới những đối tượng không chuyên, nên chưa đào sâu vào định lượng tính toán liên quan đến công nghệ xử lý dữ liệu lớn, mà chỉ đề cập tương đối định tính về vấn đề này.
+
+Hướng phát triển cho đề tài: 
+
+Ý tưởng: “Bàn làm việc mẫu mực!” \\
+Ý tưởng này là thiết kế một bộ bàn ghế làm việc, trong đó chiếc ghế được gắn cảm biến có thể cảm nhận được tư thế ngồi của chủ nhân nó trong quá trình làm việc, chiếc ghế sẽ được kết nối mạng với máy tính hoặc smartphone của chủ sử dụng. Đồng thời cũng được kết nối mạng tới một máy chủ mạng được tích hợp dữ liệu lớn đã thu thập về mối quan hệ giữa tư thế ngồi và tình trạng sức khỏe của người sử dụng. Như vậy, khi làm việc, chủ nhân của chiếc ghế sẽ được đánh giá sơ bộ về cân nặng, chiều cao, rồi sau một thời gian làm việc, nếu người sử dụng có những tư thế thể hiện sự mệt mỏi, máy tính có thể hiện lên một dòng chữ nhẹ nhàng lướt qua, nhắc nhở chủ nhân nó hãy tỉnh táo lại hoặc “hãy nghỉ ngơi một chút, bạn đã ngồi làm việc quá lâu!”. Quan trọng hơn, khi tư thế ngồi của người sử dụng có thể ảnh hưởng tới cột sống, máy tính hay smartphone có thể nhắc nhở người sử dụng của nó nên điều chỉnh tư thế nếu không sẽ ảnh hưởng xấu tới sức khỏe. Chiếc bàn, dĩ nhiên được gắn cảm biến hồng ngoại, xác định được độ tỉnh táo của người sử dụng thông qua phân tích độ mở to của đôi mắt, phân tích độ sáng của không gian xung quanh để điều chỉnh độ sáng màn hình máy tính và đèn làm việc cho phù hợp. Và đồng thời xác định khoảng cách giữa mắt người và bàn làm việc để đảm bảo đôi mắt của người sử dụng được khỏe mạnh.
 
 \begin{thebibliography}{30}
 \bibitem{definition}
@@ -284,7 +381,5 @@ Jeffrey Dean and Sanjay Ghemawat, 2004, \textbf{\it MapReduce: Simplified Data P
 \url{https://static.googleusercontent.com/media/research.google.com/vi//archive/mapreduce-osdi04.pdf}
 
 \end{thebibliography}
-
-
 
 \end{document}
