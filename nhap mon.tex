@@ -182,16 +182,109 @@ Với một lượng dữ liệu lớn như vậy thì ta cần sử dụng nh�
 \caption{\it Thị phần kiến trúc siêu máy tính}
 \end{figure}
 
+Một cụm máy tính (computer cluster) là một tập hợp những máy tính hoạt động cùng nhau, thường được kết nối với nhau thông qua một mạng LAN tốc độ rất cao, thường được đặt gần nhau trong cùng một trung tâm dữ liệu. Mỗi node trong cluster là một máy tính chạy một hệ điều hành, trên một phần cứng riêng biệt. Ở nhiều khía cạnh, có thể coi một cụm máy tính là một hệ thống đơn nhất. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm]{cluster.png}
+\caption{\it Ví dụ về kiến trúc cluster}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{cluster.jpg}
+\caption{\it Trung tâm dữ liệu dưới dạng cluster}
+\end{figure}
+
+Kiến trúc cluster là một trong những kiến trúc mạnh mẽ với chi phí xây dựng hiệu quả hơn nhiều kiến trúc khác. Cụm máy tính cung cấp sức mạnh tính toán nhờ sử dụng tính toán song song, đồng thời có khả năng chịu lỗi cao – cluster vẫn có thể hoạt động khi một trong các node bị hỏng, nhờ đó đem lại tính luôn sẵn sàng cho hệ thống. Đồng thời đây là một kiến trúc phổ biến dành cho việc giải quyết các vấn đề trong Big Data.
+
+\subsection{Công nghệ Hadoop}
+\subsubsection{Tổng quan về Hadoop}
+
+Nhắc tới Big Data ta không thể không nhắc tới Hadoop, nó phổ biến đến mức nhiều khi Hadoop còn được dùng đồng nghĩa với Big Data. Hadoop được tạo bởi Doug Cutting, nhà sáng lập của Apache Lucene.
+
+Hadoop, xuất bản đầu tiên vào 10/12/2011\cite{hadoop}, là một framework mã nguồn mở phát triển bởi Apache Software Foundation được sử dụng cho lưu trữ và xử lý phân tán trên một lượng lớn dữ liệu. Hadoop được viết bằng ngôn ngữ Java và hoạt động trên một cụm máy tính,  được phát triển nhờ ý tưởng từ hai bài báo nổi tiếng của Google về Google File System (GFS) và MapReduce. 
+\newpage
+
+\subsubsection{Hệ thống file phân tán Hadoop (Hadoop Distributed File System – HDFS)}
+
+Làm việc một lượng dữ liệu lớn như vậy thì vấn đề đầu tiên đặt ra là phải lưu trữ nó như thế nào? Việc lưu trữ bằng cách thông thường với Big Data không thể đáp ứng được. Một máy tính không thể lưu trữ lượng thông tin lớn đến cả trăm Terabyte như vậy. Đồng thời nếu sử dụng cluster với cách lưu trữ thông thường (Không có cơ chế bảo vệ dữ liệu) thì khi một node bị hỏng, dữ liệu bị mất là điều khó tránh khỏi.
+
+Để đáp ứng được nhu cầu lưu trữ như vậy, Hadoop đi cùng với hệ thống file phân tán gọi là HDFS. Các ứng dụng trên Hadoop sử dụng HDFS. HDFS được thiết kế để lưu trữ các tệp dữ liệu rất lớn, chạy trên các cluster, với các đặc tính:
+
+\begin{itemize}
+\item \textit{Sử dụng với những file rất lớn}: “Rất lớn” ở đây nghĩa rằng file có kích thước tính bằng MB, GB hoặc TB. Có những cụm máy tính chạy Hadoop ngày nay có lượng dữ liệu lưu trữ lên đến hàng Petabyte (1024 Terabyte).
+
+\item \textit{Truy cập dưới dạng stream}: HDFS được xây dựng dựa trên ý tưởng rằng cách hiệu quả nhất để xử lý dữ liệu là “ghi một lần – đọc nhiều lần”, hay là tối ưu hóa việc đọc dữ liệu. Một bộ dữ liệu thường được sản sinh hay sao chép từ một nguồn nào đó, và rất nhiều những phép toán phân tích được thực hiện trên nó theo thời gian. Mỗi phép toán phân tích sẽ yêu cầu một phần, nếu không phải toàn bộ dữ liệu đã thu thập. Vì vậy việc đọc toàn bộ dữ liệu xảy ra thường xuyên hơn nhiều việc ghi.
+
+\item \textit{Sử dụng Commodity Hardware}: Hadoop không yêu cầu những phần cứng đắt tiền, có tính tin cậy cao. Nó được thiết kế để chạy trên một cluster của các Commodity Hardware (Những phần cứng phổ biến mà có thể đến từ nhiều nhà sản xuất khác nhau, không phải những phần cứng được thiết kế chuyên biệt như các kiến trúc khác). Những phần cứng này có tỉ lệ hỏng hóc cao nếu so với một cluster lớn. HDFS được thiết kế để làm việc với những hỏng hóc như vậy mà không làm ngắt quãng việc xử lý đối với người sử dụng (client). 
+\end{itemize}
+
+Những khái niệm trong HDFS:
+\begin{itemize}
+\item[+] \textbf{Block}: Ổ cứng có những block, là kích thước nhỏ nhất mà có thể đọc được mỗi lần, thông thường là 512 byte. HDFS cũng vậy, nhưng block trong HDFS có kích thước lớn hơn rất nhiều – mặc định là 128 MB. Tuy nhiên có sự khác biệt là một file có kích thước nhỏ hơn một block trong HDFS thì không chiếm giữ toàn bộ nó. Mục đích của việc block trong HDFS rất lớn là để giảm việc dịch chuyển giữa các vùng trong ổ cứng – khi kết hợp với phương pháp lưu trữ tạm thời trong RAM. Block cung cấp một lớp trìu tượng đối với dữ liệu trong ổ cứng. Đồng thời nó là trung tâm của việc sao chép dữ liệu: Hadoop duy trì một số lượng cố định những bản sao chép của một block và phân bố nó trải rộng trên các node của cluster. 
+
+\item[+] \textbf{Namenode và Datanode}: Một node trong cluster chạy HDFS sẽ chiếm một trong hai vai trò, một là master (namenode) – node trung tâm, có ảnh hưởng lớn đến các node khác, và slave (datanode) – node hoạt động dưới sự quản lý của master. Namenode quản lý toàn bộ không gian tên của HDFS. Nó quản lý toàn bộ cây thư mục, những metadata cho tất cả các file trong HDFS. Những thông tin này được namenode được lưu trữ lâu dài trong ổ cứng của nó. Metadata của từng file lưu trữ thông tin của file đó như tên file, vị trí của các datanode, vị trí của block chứa file.
+
+Datanode là những node mà dữ liệu (block) thực sự được lưu trữ. Chúng lưu trữ và lấy block trong ổ cứng khi được yêu cầu, báo cáo định kì về cho namenode danh sách những block cua mình. Nếu không có namenode, toàn bộ hệ thống file không thể được sử dụng. Vì vậy, namenode thường là nơi chứa máy tính có độ tin cậy và sức mạnh cao nhất trong cluster. Và để  chống lại những sự cố xảy ra ở namenode, HDFS có thể back up những dữ liệu của namenode một cách định kì, hoặc sử dụng một namenode thứ hai để tránh hỏng hóc xảy ra ở namenode chính. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{namenode.jpg}
+\caption{\it Namenode và Datanode}
+\end{figure}
+\end{itemize}
+
+\textbf{Hoạt động của HDFS}
+\begin{itemize}
+\item \textbf{Đọc file}: Việc đọc file bắt đầu khi client gọi hàm open, qua nó, client gửi yêu cầu dữ liệu cho namenode. Namenode sau đó trả về địa chỉ của các datanode mà lưu trữ block của file cần truy cập. Client lựa chọn node gần nhất trong các datanode để đọc dữ liệu. Nếu bản thân client là datanode đó, client sẽ đọc dữ liệu từ chính ổ cứng của mình. Trong trường hợp datanode được yêu cầu dữ liệu không đáp lại, client sẽ báo ngược trở lại namenode rằng datanode đó đã có sự cố, đồng thời cố gắng truy cập những datanode còn lại. Việc đọc dữ liệu sau đó sẽ thông qua đường truyền dữ liệu mạng như thông thường giữa client và datanode. Tất cả những thao tác đó được gói gọn trong API cung cấp bởi Hadoop, với giao diện giống như chuẩn POSIX thông thường.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{read.png}
+\caption{\it Đọc dữ liệu trên HDFS \cite{read}}
+\end{figure}
+
+\item \textbf{Ghi file}: Việc ghi dữ liệu bắt đầu khi client gọi hàm create, yêu cầu cho namenode tạo một file mới trong cây thư mục của nó. Namenode sau đó tạo  một bản ghi của file vừa mới tạo. Client yêu cầu namenode cấp phát một danh sách các datanode để lưu trữ file. Client sẽ ghi dữ liệu vào datanode thứ nhất, đồng thời datanode thứ nhất chuyển tiếp dữ liệu cho datanode thứ hai trong danh sách, tạo nên một cơ chế đường ống, cứ như vậy cho đến datanode cuối cùng – số lượng datanode tương ứng với số lượng bản sao của một block được cài đặt từ ban đầu.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{write.png}
+\caption{\it Ghi dữ liệu trên HDFS \cite{write}}
+\end{figure}
+\end{itemize}
+
+\subsubsection{Tổng quan về MapReduce}
+Nhờ HDFS, ta đã có thể lưu trữ được lượng rất lớn dữ liệu với độ tin cậy cao. Tuy nhiên, vấn đề đặt ra là ta sẽ phải làm gì với những dữ liệu đấy? Xử lý nó ra sao? Làm thế nào để xử lý chúng được nhanh chóng? - Đó là lý do mà MapReduce được tạo ra.
+
+Được bắt nguồn từ bài báo nổi tiếng của Google \cite{mapreduce_google}, nó là mô hình tính toán song song phân tán rất mạnh mẽ của Hadoop. MapReduce được coi là trái tim của Hadoop, dù mô hình tuy đơn giản, bao gồm hai hàm chính là map và reduce. 
+
 
 \begin{thebibliography}{30}
 \bibitem{definition}
 \textit{Big Data là gì và người ta khai thác, ứng dụng nó vào cuộc sống như thế nào?}, 2016. \\
 \url{https://www.linkedin.com/pulse/big-data-l%C3%A0-g%C3%AC-v%C3%A0-ng%C6%B0%E1%BB%9Di-ta-khai-th%C3%A1c-%E1%BB%A9ng-d%E1%BB%A5ng-n%C3%B3-v%C3%A0o-cu%E1%BB%99c-nguyen}
+
 \bibitem{top500}
 \textit{The Supercomputer Landscape Today}, 2013. \\
 \url{http://wiki.expertiza.ncsu.edu/index.php/CSC/ECE_506_Spring_2013/1b_dj}
 
+\bibitem{hadoop}
+\textit{Apache Hadoop}. \\
+\url{https://en.wikipedia.org/wiki/Apache_Hadoop}
+
+\bibitem{read}
+Tom White (2015), \textit{Hadoop: The Definitive Guide}, 4th Edition, O'Reilly Media, page 69.
+
+\bibitem{write}
+Tom White (2015), \textit{Hadoop: The Definitive Guide}, 4th Edition, O'Reilly Media, page 72.
+
+\bibitem{mapreduce_google} 
+Jeffrey Dean and Sanjay Ghemawat, 2004, \textbf{\it MapReduce: Simplified Data Processing on Large Clusters}, Google, Inc. \\
+\url{https://static.googleusercontent.com/media/research.google.com/vi//archive/mapreduce-osdi04.pdf}
+
 \end{thebibliography}
+
 
 
 \end{document}

@@ -12,3 +12,7 @@
 \contentsline {subsection}{\numberline {2.4}Ti\IeC {\d \ecircumflex }n \IeC {\'\i }ch v\IeC {\'\ohorn }i Big Data}{8}{subsection.0.2.4}
 \contentsline {section}{\numberline {3}C\IeC {\'a}c c\IeC {\^o}ng c\IeC {\d u} khai th\IeC {\'a}c Big Data}{10}{section.0.3}
 \contentsline {subsection}{\numberline {3.1}C\IeC {\d u}m m\IeC {\'a}y t\IeC {\'\i }nh (Computer Cluster)}{10}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2}C\IeC {\^o}ng ngh\IeC {\d \ecircumflex } Hadoop}{11}{subsection.0.3.2}
+\contentsline {subsubsection}{T\IeC {\h \ocircumflex }ng quan v\IeC {\`\ecircumflex } Hadoop}{11}{section*.13}
+\contentsline {subsubsection}{H\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng file ph\IeC {\^a}n t\IeC {\'a}n Hadoop (Hadoop Distributed File System \IeC {\textendash } HDFS)}{12}{section*.14}
+\contentsline {subsubsection}{T\IeC {\h \ocircumflex }ng quan v\IeC {\`\ecircumflex } MapReduce}{15}{section*.18}
