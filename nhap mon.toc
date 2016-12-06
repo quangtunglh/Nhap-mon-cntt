@@ -17,5 +17,5 @@
 \contentsline {subsubsection}{T\IeC {\h \ocircumflex }ng quan v\IeC {\`\ecircumflex } Hadoop}{12}{section*.13}
 \contentsline {subsubsection}{H\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng file ph\IeC {\^a}n t\IeC {\'a}n Hadoop (Hadoop Distributed File System \IeC {\textendash } HDFS)}{12}{section*.14}
 \contentsline {subsubsection}{T\IeC {\h \ocircumflex }ng quan v\IeC {\`\ecircumflex } MapReduce}{16}{section*.18}
-\contentsline {chapter}{Nh\IeC {\~\uhorn }ng ch\IeC {\h i} tr\IeC {\'\i }ch \IeC {\dj }\IeC {\'\ocircumflex }i v\IeC {\'\ohorn }i Big Data}{20}{chapter*.27}
-\contentsline {chapter}{K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n v\IeC {\`a} h\IeC {\uhorn }\IeC {\'\ohorn }ng ph\IeC {\'a}t tri\IeC {\h \ecircumflex }n}{21}{chapter*.28}
+\contentsline {chapter}{C\IeC {\ohorn } h\IeC {\d \ocircumflex }i, th\IeC {\'a}ch th\IeC {\'\uhorn }c v\IeC {\`a} ch\IeC {\h i} tr\IeC {\'\i }ch}{20}{chapter*.27}
+\contentsline {chapter}{K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n v\IeC {\`a} h\IeC {\uhorn }\IeC {\'\ohorn }ng ph\IeC {\'a}t tri\IeC {\h \ecircumflex }n}{22}{chapter*.30}
