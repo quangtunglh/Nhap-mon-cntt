@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.29)  6 DEC 2016 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.29)  6 DEC 2016 22:13
 entering extended mode
 **"./nhap mon.tex"
 ("nhap mon.tex"
@@ -1653,7 +1653,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 433.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
 Package rerunfilecheck Info: File `"nhap mon".out' has not changed.
-(rerunfilecheck)             Checksum: F85515AE25B34F04146BC5E30DC502AC;1452.
+(rerunfilecheck)             Checksum: E563785B65A0B9C1D26711B966105EDF;1453.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 433.
  ) 
 Here is how much of TeX's memory you used:
@@ -1670,7 +1670,7 @@ b><C:/Users/Quang Tung/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex/vnr/vnr12.p
 fb><C:/Users/Quang Tung/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex/vnr/vnti12
 .pfb><C:/Users/Quang Tung/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex/vnr/vntt
 12.pfb>
-Output written on "nhap mon.pdf" (24 pages, 2399496 bytes).
+Output written on "nhap mon.pdf" (24 pages, 2399509 bytes).
 PDF statistics:
  310 PDF objects out of 1000 (max. 8388607)
  75 named destinations out of 1000 (max. 500000)

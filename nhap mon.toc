@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {1.4}T\IeC {\d a}i sao Big Data \IeC {\dj }ang tr\IeC {\h \ohorn } th\IeC {\`a}nh m\IeC {\d \ocircumflex }t xu th\IeC {\'\ecircumflex }?}{6}{subsection.0.1.4}
 \contentsline {section}{\numberline {2}Nh\IeC {\~\uhorn }ng v\IeC {\'\i } d\IeC {\d u} v\IeC {\`\ecircumflex } Big Data}{6}{section.0.2}
 \contentsline {subsection}{\numberline {2.1}Th\IeC {\'\i } nghi\IeC {\d \ecircumflex }m v\IeC {\`\ecircumflex } m\IeC {\'a}y gia t\IeC {\'\ocircumflex }c h\IeC {\d a}t l\IeC {\'\ohorn }n (LHC) \IeC {\h \ohorn } Ch\IeC {\^a}u \IeC {\^A}u}{6}{subsection.0.2.1}
-\contentsline {subsection}{\numberline {2.2}M\IeC {\'\ocircumflex }i quan h\IeC {\d \ecircumflex } gi\IeC {\~\uhorn }a bigdata v\IeC {\`a} Tr\IeC {\'\i } tu\IeC {\d \ecircumflex } nh\IeC {\^a}n t\IeC {\d a}o}{7}{subsection.0.2.2}
+\contentsline {subsection}{\numberline {2.2}M\IeC {\'\ocircumflex }i quan h\IeC {\d \ecircumflex } gi\IeC {\~\uhorn }a Big Data v\IeC {\`a} Tr\IeC {\'\i } tu\IeC {\d \ecircumflex } nh\IeC {\^a}n t\IeC {\d a}o}{7}{subsection.0.2.2}
 \contentsline {subsection}{\numberline {2.3}C\IeC {\'a}c v\IeC {\'\i } d\IeC {\d u} kh\IeC {\'a}c}{8}{subsection.0.2.3}
 \contentsline {subsection}{\numberline {2.4}Th\IeC {\^e}m m\IeC {\d \ocircumflex }t v\IeC {\`a}i th\IeC {\^o}ng tin c\IeC {\d \acircumflex }p nh\IeC {\d \acircumflex }t}{9}{subsection.0.2.4}
 \contentsline {subsection}{\numberline {2.5}Ti\IeC {\d \ecircumflex }n \IeC {\'\i }ch v\IeC {\'\ohorn }i Big Data}{9}{subsection.0.2.5}
